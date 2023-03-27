@@ -1,0 +1,63 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.works {
+	@include container(1200px);
+	width: 800px;
+
+	.title {
+		@include title(2rem);
+		color: var(#{--text-color-defaut});
+	}
+	.sliders {
+		h4 {
+			margin-bottom: 10px;
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 22px;
+			text-decoration-line: underline;
+			margin-top: 25px;
+			color: var(#{--text-color-defaut});
+		}
+		.slider {
+			box-shadow: var(#{--box-shadow-defaut});
+			border-radius: 20px;
+			.slider__item {
+				width: 890px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 500px;
+
+				a {
+					width: 800px;
+					height: 500px;
+					border-radius: 20px;
+					overflow: hidden;
+					.active {
+						cursor: pointer;
+						background-repeat: no-repeat;
+						background-size: cover;
+						width: 800px;
+						animation-name: aniImg;
+						animation-duration: 60s;
+						animation-timing-function: linear;
+						animation-iteration-count: infinite;
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes aniImg {
+	0% {
+		transform: translateY(-0%);
+	}
+	50% {
+		transform: translateY(-75%);
+	}
+	100% {
+		transform: translateY(-0%);
+	}
+}

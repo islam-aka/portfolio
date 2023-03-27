@@ -1,0 +1,44 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.skills {
+	@include container(1200px);
+	background: transparent;
+	backdrop-filter: blur(87px);
+	border-radius: 20px;
+	box-shadow: var(#{--box-shadow-defaut});
+
+	padding: 30px;
+
+	.title {
+		@include title;
+		@include active;
+		text-align: center;
+		margin-bottom: $marginBottomTitle;
+	}
+	ul {
+		@include container(455px);
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		gap: 0px 0px;
+
+		li {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+		}
+
+		.circle {
+			width: 0.5rem;
+			height: 0.5rem;
+			border-radius: 50%;
+			background: var(#{--text-color-defaut});
+			opacity: 0.7;
+		}
+
+		.text {
+			@include text();
+		}
+	}
+}

@@ -1,0 +1,23 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixin.scss";
+
+.navBar {
+	flex: 10;
+	ul {
+		@include flex;
+
+		li {
+			@include nav;
+			padding: 16px 0;
+			color: var(#{--textNoActive-color-defaut});
+			cursor: pointer;
+		}
+		.click {
+			display: flex;
+			gap: 30px;
+		}
+		.active {
+			@include active;
+		}
+	}
+}

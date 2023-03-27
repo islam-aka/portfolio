@@ -1,0 +1,36 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
+.mainScreen {
+	@include container(1200px);
+	@include flex(space-around);
+	padding-bottom: 60px;
+	&__left {
+		overflow: hidden;
+		width: 374px;
+		height: 405px;
+		border-radius: 10px;
+
+		img {
+			width: 390px;
+			height: 405px;
+			border-radius: 10px;
+		}
+	}
+	&__right {
+		@include flex(space-between, column);
+		height: 370px;
+		max-width: 466px;
+		text-align: center;
+		&_title {
+			@include title(3rem);
+			color: var(#{--text-color-defaut});
+		}
+		&_subTitle {
+			@include grid(25px);
+			li {
+				@include text;
+			}
+		}
+	}
+}

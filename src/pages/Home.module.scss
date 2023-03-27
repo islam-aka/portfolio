@@ -1,0 +1,15 @@
+@import "../styles/variables.scss";
+@import "../styles/mixin.scss";
+
+.home {
+	@include grid(60px);
+	position: relative;
+	.emptyBlock {
+		width: 1200px;
+		height: 54px;
+	}
+	&__line {
+		@include container(1200px);
+		border-bottom: 1.5px solid var(#{--textNoActive-color-defaut});
+	}
+}
